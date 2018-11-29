@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel = "stylesheet" type ="text/css" href ="style.css">
+</head>
+  <body>
+     <div class = "intro">
+		<h1>CALCULATOR</h2>
+	 </div>
+	   <div class = "input">
+	  <input type="text" id="num">
+	   </div>
+	  <div class = "row1">
+	  <button onclick="one()" class = "one">1</button>
+	  <button onclick="two()" class = "two">2</button>
+	  <button onclick="three()" class ="three">3</button>
+	  <button onclick="four()" class ="four">4</button>
+	  </div>
+		<div class ="row2">
+	  <button onclick="five()" class="five">5</button>
+	  <button onclick="six()" class="six">6</button>
+	  <button onclick="seven()" class ="seven">7</button>
+	  <button onclick="eight()" class = "eight">8</button>
+		</div>
+	<div class = "row3">
+	  <button onclick="nine()" class = "nine">9</button>
+	  <button onclick="zero()" class = "zero">0</button>
+	  <button onclick="add()" class = "add">+</button>
+	  <button onclick="subtract()" class = "subtract">-</button>
+		</div>
+	<div class = "row4">
+	  <button onclick="multiply()" class = "multiply">*</button>
+	  <button onclick="divide()" class = "divide">/</button>
+	  <button onclick="equals()" class = "equals">=</button>
+	  <button onclick="CLEAR()" class = "clear">CL</button>
+	</div>
+	  <script type="text/javascript">
+		  
+		  var n2 = 0;
+		  var n1 = 0;
+		  var f = "";
+		  var value;
+		
+		
+		 
+		  
+		  function add(){
+		
+			n2 = document.getElementById("num").value;
+			value =document.getElementById("num").value = "";
+			f = "add";
+			
+		  }
+		  function subtract(){
+			n2 = document.getElementById("num").value;
+			value =document.getElementById("num").value = "";
+			f = "subtract";
+			 
+		  }
+		  function divide(){
+		    n2 = document.getElementById("num").value;
+			value =document.getElementById("num").value = "";
+			f = "divide"
+		  }
+		  function multiply(){
+			n2 = document.getElementById("num").value;
+			value = document.getElementById("num").value = "";
+			f = "multiply"
+		  }
+		  function equals(){
+		  switch(f){
+		  case "add":
+		    n1 = document.getElementById("num").value;
+		    value = document.getElementById("num").value = parseInt(n1) + parseInt(n2);
+			f = "";
+			
+			break;
+			
+		  case "subtract":
+		    n1 = document.getElementById("num").value;
+			value = document.getElementById("num").value = parseInt(n2) - parseInt(n1);
+			f = "";
+			break;
+		  case "multiply":
+			n1 = document.getElementById("num").value;
+			value = document.getElementById("num").value = parseInt(n1) * parseInt(n2);
+			f = "";
+			break;
+		  case "divide":
+			n1 = document.getElementById("num").value;
+			value = document.getElementById("num").value = parseInt(n2) / parseInt(n1);
+			f = "";
+			break;
+		  
+			}
+		   
+			}
+			
+		
+		  function one(){
+			document.getElementById("num").value += 1;
+		  }
+		  
+		  function two(){
+		    document.getElementById("num").value += 2;
+		  }
+		  function three(){
+			document.getElementById("num").value +=3;
+		  }
+		  function four(){
+			document.getElementById("num").value +=4;
+		  }
+		  function five(){
+			document.getElementById("num").value +=5;
+		  }
+		  function six(){
+			document.getElementById("num").value +=6;
+		  }
+		  function seven(){
+			document.getElementById("num").value +=7;
+		  }
+		  function eight(){
+			document.getElementById("num").value +=8;
+		  }
+		  function nine(){
+			document.getElementById("num").value +=9;
+		  }
+		  function zero(){
+			document.getElementById("num").value +=0;
+		  }
+		  function CLEAR(){
+			document.getElementById("num").value = value = "";
+			
+		  }
+	  </script>
+  </body>
+</html>
